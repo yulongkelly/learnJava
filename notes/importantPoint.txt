@@ -1,0 +1,2 @@
+In Java, we normally make at leat two files, one for the main class, and the other for the methods. To call the method in other files, we just need to write:
+class name + method name();
