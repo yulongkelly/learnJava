@@ -5,3 +5,8 @@ Note: private class has nothing to do with security; people can still see it , j
 why private calss?
 -less for user of call to understand
 -safe for you to change private method(will not affect any other method or the project)
+
+//
+primitive types(8 in java):
+byte, short, int, long, float, double, boolean, char
+

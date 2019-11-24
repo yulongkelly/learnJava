@@ -1,0 +1,22 @@
+/* Primitive types(8 in total) */
+Java does NOT write anything into the reserved boxes
+ex: int x;
+---> behind the screen, x get a box but there's nothing in it yet
+
+
+/* Reference Types(an arrow) */
+Defn: everything else, inclding arrays, is a reference type.
+when we declear a class variable(Dog x;), Java will create a 64 bits for it no matter what type is it for x. However, if (x = new Dog(1000, 8.3)),
+that's one int and one double, totally 96 bits. So how can 96 bits fit into 64 bits?
+Ans: Java will send it to a new address where have 96 bits free space
+and what's in the 64 bits space now? ----- the address!
+
+Next, how about we write (Dog y = x). what's inside the box of y?
+---> the same address as x, which means x and y point the same address(no anther duplicate address will be created!)
+
+
+
+//The meaning of "="" for primitive type
+b=a copies all the bits from a into b (value)
+//The meaning of "="" for reference type
+b=a copies all the bits from a into b (address)
