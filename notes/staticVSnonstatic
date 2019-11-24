@@ -1,0 +1,7 @@
+static method
+when the class is not instantiated.(do not need to write Class x = new Class();)
+There is not a constroctor inside class.
+need the type of the output
+
+non-static: using a variable to call the method
+	static: using the class name to call the method

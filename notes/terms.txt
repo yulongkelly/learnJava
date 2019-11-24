@@ -1,0 +1,7 @@
+public : can be used by other calsses
+private: cannot be used by other calsses, even main function!
+Note: private class has nothing to do with security; people can still see it , just a help tool for users 
+
+why private calss?
+-less for user of call to understand
+-safe for you to change private method(will not affect any other method or the project)
