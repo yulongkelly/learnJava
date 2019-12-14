@@ -14,9 +14,15 @@ and what's in the 64 bits space now? ----- the address!
 Next, how about we write (Dog y = x). what's inside the box of y?
 ---> the same address as x, which means x and y point the same address(no anther duplicate address will be created!)
 
+//Array
+
+
 
 
 //The meaning of "="" for primitive type
 b=a copies all the bits from a into b (value)
 //The meaning of "="" for reference type
 b=a copies all the bits from a into b (address)
+
+
+

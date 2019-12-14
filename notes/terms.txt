@@ -1,4 +1,4 @@
-public : can be used by other calsses
+1. public : can be used by other calsses
 private: cannot be used by other calsses, even main function!
 Note: private class has nothing to do with security; people can still see it , just a help tool for users 
 
@@ -9,4 +9,6 @@ why private calss?
 //
 primitive types(8 in java):
 byte, short, int, long, float, double, boolean, char
+
+2. invariants: a conditio that is guaranteed to be true during code execuate
 
