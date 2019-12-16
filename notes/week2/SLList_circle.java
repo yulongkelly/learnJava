@@ -21,7 +21,7 @@ public class SLList_circle{
 		sentinel.previous.next = new NewIntNode(sentinel.previous, x, sentinel);
 		sentinel.previous = sentinel.previous.next;
 	}
-	public void deleteLast(int n){
+	public void deleteLast(){
 		sentinel.previous.previous.next = sentinel;
 		sentinel.previous = sentinel.previous.previous;
 		//no pointer point to the last node, so the last node will be clear?

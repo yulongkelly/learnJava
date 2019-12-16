@@ -1,0 +1,42 @@
+Test-Driven Development(TDD)
+1. identify a new feature
+2. write a test for that feature
+3. run the test. It should fail(since, you write the test before writing the code)
+4. Write code that pass the test
+optional: refactor code to make it faster, cleaner, ect.
+
+Hypernym and Hyponym
+dog: Hyoernym(统称)of "poodle", "malamute"...
+poodle : hyponym of "dog"
+
+Overloading
+multiple methods with the same name
+
+
+Override
+if a subclass has a method with the same signiture as superclass(interface class; hypernym), we say the subclass method overrides the method.
+
+Interface Inheritance:
+Use one calss(hypernym) to represent other subclasses
+
+note: we can write a defult method in interface class, which every subclasses can use it. Even if there is a defult method(print) in superclass, the subclass can still override a new method with the same name(print).(since you may not trust the defult method).
+
+
+Question:
+if you run this code:
+public staic void main(string[] args) {
+	List61B<String> someList = new SList<String>();
+	someList.print();
+}
+Which print method will run?
+A: the defult method in List61B
+B: the override method in SList
+note: List61B is the super class
+
+the answer is B.
+why?
+Every variable in Java has two types:
+static Type: declaration
+dynamic type: instantiation(when using new)
+if dynamic type overrides the method, it is used instead
+

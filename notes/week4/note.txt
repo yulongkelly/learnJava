@@ -1,0 +1,2 @@
+Extends:
+can allow a class inherits all members of another class.(can use all methods, nested classes and variables, which created in another class. But note the private one and the constructors)
