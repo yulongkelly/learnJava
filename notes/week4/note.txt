@@ -1,2 +1,110 @@
+Note for last week: Override can only apply to non-static method
+
+
+***************************************************************
 Extends:
 can allow a class inherits all members of another class.(can use all methods, nested classes and variables, which created in another class. But note the private one and the constructors)
+Note: 1)After you extends the class, you inherited all methods 	
+	but not constructors. However, if you want to call the methods, the type must be the same as the super class. Therefore, when you make constructors for subclass,  constructors must start 	with a call to a constructor for the super class.
+	ex:
+	1. public subclass() {
+		aPublicVar = new SuperClass<Item>();
+	}
+	2. public subclass(Item x) {
+		super(x);
+		aPublicVar = new SuperClass<Item>();
+	}
+	2) The subclass can Override methods it doesn't like
+
+Abstract class
+1. can have abstract methods(same as interface) as well as concrete methods(same as normal class).
+2. can be extends by other class.
+3. cannot be instantiate but can be declared
+
+
+Abstract class VS Interface
+1. interface is considered as 100% abstract class, since inside interface every method is always public and abstract. 
+2. Method: we can't declare interface method with private, protected, final, static, synchronized, native and strictfp. but there is no restriction on abstract class
+3. Variable: only public, static and final for interface. abstract can use all modifier except those 3.
+4. Constructor: No for interface and Yes for abstract class
+
+
+
+
+***************************************************************
+Complexity: The Enemy
+Tools:
+-Hieratchical abstraction
+	create layers of abstraction, with clear abstraction barriers
+-"Design for change"
+	organize program around objects
+	let objects deside how things are done
+	Hide information others don't need
+
+Module: A set of methods that work together as a whole to perform some task of related tasks.
+
+A module is said to be encapsulated if its implementation is completely hidden, and it can be accessed only through a documented interface.
+Note: Implementation inheritance(eg: extends) breaks encapsulation!
+Why?
+Because sometimes we will override a method(suppose we call it method 1) and call a method(call it method 2) in the superclass. However, if the method(in the superclass) we call calls another method(method 3) in the superclass in order to finish the implementation but the method 1, method 3 have the same name, method 2 will call method 1 in this case(because of dynamic method selection). Then, obviously, method 1 calls method 2 and method 2 calls method1 will form a loop which never end.
+
+If we want to use encapsulation(method calls another method to form a implementation) in the supper class, we need to comment it out(eg. do not override this method).
+
+
+
+***************************************************************
+Casting
+Compile-Time Type checking 
+subClass<Item> s -->compile-time type
+new subClass<Item>() -->run-time type
+Java decides whether or not you can make a call based on compile-time. So if you write
+SuperClass<Item> s1 = s;
+s1's run-time type is subClass
+you can not use s1 to call the method
+So basically, the first pointer is the one can call the methods
+
+Note: we can force the compile-time type of a method to be be the class we want if the compile-time type is the superclass of the class
+eg:
+Class x = (Class) method(x, y); -->Compilation(method(x, y) returns the super class type of Class)
+
+The rules: 
+Compiler allows memory box to hold any subtype.
+Compiler allows calls based on static type.
+Overridden non-static methods are selected at run time based on dynamic type.
+Everything else is based on static type, including overloaded methods. Note: No overloaded methods for problem at left.
+
+Questions:
+ShowDog(overrides bark() in Dog) -> Dog(super class for ShowDog) -> Object(super class for Dog)
+This happened in ShowDog class
+Object o2 = new ShowDog("M", "C", 25, 512.2)
+
+ShowDog sdx = ((ShowDog) o2);
+sdx.bark(); --> ShowDog.bark() calls
+
+Dog dx = ((Dog) o2);
+dx.bark(); --> ShowDog.bark() calls
+
+
+
+***************************************************************
+Higher oder Function: a function that treats other function as data
+
+
+
+***************************************************************
+Subtype Polymorphism
+Polymorphism defn: providing a single interface to entities of different types
+
+The difference in terms of which method get called is based on which rull-time type the object is
+
+
+***************************************************************
+Comparator
+Natural Order
+Defn: refer to the ordering implied by a Comparable's compareTo method
+eg: to compare the size of dogs we just use the size variable in dog type.
+
+How can we compare different things without calling the thing(eg. x.size)
+
+
+

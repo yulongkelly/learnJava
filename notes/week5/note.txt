@@ -1,0 +1,35 @@
+Environment variables
+CLASSPATH = :/home/jug/course-materials-sp16/javalib/*:./
+
+With classpath above, java and javac check for dependencies in:
+	/home/jug/course-materials-sp16/javalib/*
+	* means don't just look at class files but also look inside any .jar file
+	./ --> means current directory
+	../ --> means directory one up
+
+
+***************************************************************************
+Package
+make a package can allow you to import your own package to other class(like library)
+
+To compile a class in a package, if you don't want to compile it under the correct directory, you can use "javac -d ..."
+
+
+***************************************************************************
+For each primitive type, there is a corresponding reference type.
+eg: boolean's wrapper class is Boolean
+
+Autoboxing
+Defn: Implicit conversions between wrapper/primitives.
+If you hava a parameter type "Integer", java will automatically create "int" for you 
+ 
+
+***************************************************************************
+Immutability
+Immutable data type
+An immutable data type is one for which an instance cannot change in any observable way after instantiation.
+eg: integer, string
+public final int x;
+"final" keyword will help the compiler ensure immutability
+once you declare the value of x you cannot instantiate again in order to change it
+However if it is reference type, you can change the value but not the run-time type

@@ -1,0 +1,69 @@
+Throwing Exceptions 
+if there exists exceptions, we can write our own exception warning:
+throw new IllegalArgumentException("")
+throw new RuntimeException("")
+
+Try and catch Exceptions
+Advantage:
+after the exception, java will print the exception and keep going, the most important thing is that we can do something in catch to fix the error
+
+Checked Exceptions
+the excetions you must handle before compile, you cannot run
+eg: IOException
+However if you use catch, java will allow you, and you should handle this problem in catch
+You can also use specify, and someone else should handle it  -- write "throw IOException" after the method head
+
+Question:
+Why we need to use try and catch instead of using if statement to fix the exception?
+
+****************************************************************************
+Iteration
+Let's say if you want to create a variable called "ArrayMap.KeyIterator"
+First you need to create a class inside ArrayMAp class, then write methods which you want KeyIterator to do inside KeyIterator class. 
+Note: when you instantiate the variable, you must create an ArryaMap first, then use the variable(eg, am) to instantiate(eg. am.new.KeyIterator; copy am)
+
+
+*******************************************************************************
+Package
+Defn: a namespace that organizes classes and interface
+
+A java class without a package name at the top of are part of the "default" package
+
+*******************************************************************************
+Jar files
+Can shar you project to other programmers with just one jar file
+Step -- using intellij
+ Go to file ->project structure ->Artifact ->Jar -> From modules with dependencies -> click build -> build artifacts
+
+ However, it is easy to steal by other programmers!!!!
+
+
+******************************************************************************
+Access control
+For private class, you only can access in the same class you created it.
+
+If you want to use the private variable in subclass or the whole package but not others, you need to change "private" to "protected".
+
+Protected -- the thrid access level
+
+Blank -- the fourth access level
+Can be access in package and own class, but not subclass and the world
+
+Note: In a class if there is no "private" or "public" before a method, it means "private". However, in an interface, it means "public"
+
+
+*******************************************************************************
+Object method
+All calsses are hyponyms(subtype) of object
+
+Equals VS ==
+== compare the address of two objects(class) ---the pointer
+equals() compare the content inside the two address
+
+
+
+
+
+
+
+

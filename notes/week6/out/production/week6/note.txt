@@ -1,0 +1,20 @@
+Throwing Exceptions 
+if there exists exceptions, we can write our own exception warning:
+throw new IllegalArgumentException("")
+throw new RuntimeException("")
+
+Try and catch Exceptions
+Advantage:
+after the exception, java will print the exception and keep going, the most important thing is that we can do something in catch to fix the error
+
+Checked Exceptions
+the excetions you must handle before compile, you cannot run
+eg: IOException
+However if you use catch, java will allow you, and you should handle this problem in catch
+You can also use specify, and someone else should handle it  -- write "throw IOException" after the method head
+
+Question:
+Why we need to use try and catch instead of using if statement to fix the exception?
+
+****************************************************************************
+Iteration
