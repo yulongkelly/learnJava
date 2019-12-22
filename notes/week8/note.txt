@@ -1,0 +1,4 @@
+WeightedQuickUnion
+smaller size tree always connect to larger size tree
+
+Benifit: the depth of the tree will never be larger than logN

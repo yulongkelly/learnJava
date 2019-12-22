@@ -1,0 +1,23 @@
+Big theta VS Big O Vs Big Omaga
+Big theta: has upper and lower bound(often refer as worst case) -- we care about the best case as well as the worst case
+
+Big O: just have upper bound(doesn't mean the worst case!) -- it has wider range, because it includes significantly small run time 
+Why Big O useful?
+1. easier to write proof(can be rounded)
+2. sometimes people have not find a faster way yet, so they use Big O to give an upper bound(have no idea about the lower bound) 
+
+Big Omaga: just hava lower bound
+ex: if the R(N) = omage(N^2), it actual run-time may be e^N
+Why Big Omaga useful?
+1. proof(can be rounded)
+2. provide lower bound
+
+
+1+2+4+8+...+Q = 2Q-1
+logpN = logqN
+
+**************************************************************
+Merge Sort
+Two sorted array into one sorted array
+
+theta(NlogN)
